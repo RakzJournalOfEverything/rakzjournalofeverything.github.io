@@ -249,15 +249,17 @@ Error message and password prompt
 
 <li>$:/view</li>
 
+<li>Academy of Withershire</li>
+
 <li>Barni</li>
+
+<li>Entries</li>
 
 <li>Kazariel Velara</li>
 
 <li>Melastan Motley</li>
 
 <li>Rakz</li>
-
-<li>Rakz Journal of Everything</li>
 
 <li>Stool</li>
 
@@ -10340,8 +10342,8 @@ span.item {
 <div created="20210524172616325" modified="20230226184259095" title="$:/state/tab/moresidebar-1850697562">
 <pre>$:/core/ui/MoreSideBar/All</pre>
 </div>
-<div created="20210524172610573" modified="20230226184836426" title="$:/state/tab/sidebar--595412856">
-<pre>Rise of Darkness Wiki</pre>
+<div created="20210524172610573" modified="20230226190437341" title="$:/state/tab/sidebar--595412856">
+<pre>Entries</pre>
 </div>
 <div created="20210526013648196" modified="20230226184125418" title="$:/state/tabs/controlpanel/toolbars-1345989671">
 <pre>$:/core/ui/ControlPanel/Toolbars/ViewToolbar</pre>
@@ -10352,7 +10354,7 @@ span.item {
 <div title="$:/status/RequireReloadDueToPluginChange">
 <pre>no</pre>
 </div>
-<div created="20230226184842510" list="$:/ControlPanel [[Rakz Journal of Everything]] [[Die Party]]" modified="20230226185054675" title="$:/StoryList">
+<div created="20230226190307820" list="[[Academy of Withershire]] [[The Party]]" modified="20230226190307820" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20210526020236254" list="$:/core/ui/SideBar/Open $:/core/ui/SideBar/Recent &quot;Rise of Darkness Wiki&quot;" modified="20210526021042649" title="$:/tags/SideBar">
@@ -10503,6 +10505,78 @@ span.item {
 <div created="20210526013127222" modified="20210526014228682" title="$:/view">
 <pre>classic</pre>
 </div>
+<div created="20230226191044113" modified="20230226191943682" tags="" title="Academy of Withershire">
+<pre>''The City:''&lt;br&gt;
+The academy is also the capital city of Withershire.&lt;br&gt;
+The city is split into 4 districts.&lt;br&gt;
+In the south-east lies the martial district.&lt;br&gt;
+The martial district is split into swaying grass, flowing water, rocksmash, firestrike.&lt;br&gt;
+These are the 4 different martial schools to refine the appropriate style.&lt;br&gt;
+In the north west lies the school of swaying grass, north-east flowing water, south-west rocksmash, south-east firestrike.&lt;br&gt;
+Next to the flowing water school lies the adventurer's guild, next to the firestrike lies the thieves' guild.&lt;br&gt;
+Eleonora Firestrike, 3rd owner of the Firestrike school.&lt;br&gt;
+The Firestrike schools combines offensive magic with martial prowess.&lt;br&gt;
+Terris is the leader/owner of the Rocksmash House.&lt;br&gt;
+&lt;br&gt;
+''The Academy:''&lt;br&gt;
+Hierarchy of power:
+
+* Council (Head mistress and professors)
+* Teachers
+* ...
+* Students
+
+Council:
+
+* Headmistress:
+
+** Headmistress Brightheart
+** in charge of Withershire
+
+* Head of Logistics:
+
+** stocky, old-looking dwarf man
+** Professor Hammerkeg
+** trades, organization, etc.
+
+* Head of Enchantment/Magic-Crafting:
+
+** Professor Nilroth
+** magical crafting, enchanting, non-combat magic typically
+
+* Head of Warfare Department:
+
+** rough, scarred, grey-haired orc man
+** Professor Marrok Headblod
+** guards in training, martial district, combat, etc.
+** in charge of handing out slots at the colosseum
+
+* Head of Finances:
+
+** little halfling woman
+** Professor Johana Longkind
+** finances, arithmetics, mundane sciences
+
+* Head of Artisanry and Alchemy:
+
+** goblin? man
+** Professor Murgok Fizzlespark
+** likes to make things go boom
+
+* Head of The Hidden:
+
+** little halfling uncanny valley woman (Fleshwarp)
+** Professor Tucks
+** Spycraft, Thievery, etc.
+
+Teachers:
+
+* Alonso:
+** a teacher for magical crafting
+**  put me on the list for magical crafting 101
+
+* Someone Called Hrogmire? (Wasn't at the entrance ceremony)</pre>
+</div>
 <div created="20230226183430832" modified="20230226183930147" tags="PC Party Barni Dwarf [[Alem Sahib]] Mike Ranger" title="Barni">
 <pre>&lt;div class=&quot;item&quot; style=&quot;float: right&quot;&gt;
     &lt;img src=&quot;https://raw.githubusercontent.com/RakzJournalOfEverything/wiki/main/images/barni_portrait.png&quot; title=&quot;Barni&quot; style=&quot;width:500px; float:right;&quot;&gt;
@@ -10525,6 +10599,21 @@ big, thick beard, crudely braided, unkempt overall, reddish.dwarven stoutness, m
 
 
 @@display:block;clear:both;line-height:0px;@@</pre>
+</div>
+<div created="20210524172621705" modified="20230226191035041" tags="Home Start Locked $:/tags/SideBar" title="Entries">
+<pre>\define toc(colw:&quot;30&quot;)
+ &lt;div class=&quot;dynamic-table&quot;&gt;
+  &lt;$list filter=&quot;[!is[system]sort[title]]-[[Lock]]-[[Entries]]-[prefix[Draft]]-[prefix[Hidden]]&quot;&gt;
+    &lt;span class=&quot;item&quot; style=&quot;--radius: var(--rad-50);&quot;&gt;
+      &lt;$transclude tiddler=&quot;$:/core/ui/ListItemTemplate&quot;/&gt;
+    &lt;/span&gt;
+  &lt;/$list&gt;
+&lt;/div&gt;
+\end
+&lt;$set name=cw filter=&quot;[!is[system]]+[![Lock]]+[![Entries]]-[prefix[Draft]-[prefix[Hidden]]]+[length[]]+[maxall[]]+[multiply[2]]&quot; select=0&gt;
+&lt;$macrocall $name=&quot;sayhi&quot; name=&lt;&lt;cw&gt;&gt; /&gt;
+&lt;$macrocall $name=&quot;toc&quot; colw=&lt;&lt;cw&gt;&gt; /&gt;
+&lt;/$set&gt;</pre>
 </div>
 <div created="20230226182312768" modified="20230226183127326" tags="Elf Party PC Kazariel Bjorn Wizard Takedawa" title="Kazariel Velara">
 <pre>&lt;div class=&quot;item&quot; style=&quot;float: right&quot;&gt;
@@ -10599,21 +10688,6 @@ Did you think I was going to just write my backstory here for you to read withou
 
 
 @@display:block;clear:both;line-height:0px;@@</pre>
-</div>
-<div created="20210524172621705" modified="20230226185021675" tags="Home Start Locked $:/tags/SideBar" title="Rakz Journal of Everything">
-<pre>\define toc(colw:&quot;46&quot;)
- &lt;div class=&quot;dynamic-table&quot;&gt;
-  &lt;$list filter=&quot;[!is[system]sort[title]]-[[Lock]]-[[Rakz Journal of Everythingi]]-[prefix[Draft]]-[prefix[Hidden]]&quot;&gt;
-    &lt;span class=&quot;item&quot; style=&quot;--radius: var(--rad-50);&quot;&gt;
-      &lt;$transclude tiddler=&quot;$:/core/ui/ListItemTemplate&quot;/&gt;
-    &lt;/span&gt;
-  &lt;/$list&gt;
-&lt;/div&gt;
-\end
-&lt;$set name=cw filter=&quot;[!is[system]]+[![Lock]]+[![Rakz Journal of Everything]]-[prefix[Draft]-[prefix[Hidden]]]+[length[]]+[maxall[]]+[multiply[2]]&quot; select=0&gt;
-&lt;$macrocall $name=&quot;sayhi&quot; name=&lt;&lt;cw&gt;&gt; /&gt;
-&lt;$macrocall $name=&quot;toc&quot; colw=&lt;&lt;cw&gt;&gt; /&gt;
-&lt;/$set&gt;</pre>
 </div>
 <div created="20230226182855844" modified="20230226183159640" tags="Stool PC Party Barbarian Leshy [[Withershire Swamps]] Lukas" title="Stool">
 <pre>&lt;div class=&quot;item&quot; style=&quot;float: right&quot;&gt;
